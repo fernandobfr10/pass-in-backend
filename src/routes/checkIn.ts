@@ -8,6 +8,8 @@ export async function CheckIn(app: FastifyInstance) {
     "/attendees/:attendeeId/check-in",
     {
       schema: {
+        summary: "CheckIn attendee on event.",
+        tags: ["check-ins"],
         params: z.object({
           attendeeId: z.coerce.number().int(),
         }),
